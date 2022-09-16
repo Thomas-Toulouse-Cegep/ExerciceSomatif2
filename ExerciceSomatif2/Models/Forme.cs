@@ -10,6 +10,8 @@ namespace ExerciceSomatif2.Models
     {
         protected abstract void Dessiner(Graphics graphics);
 
+        public abstract string TypeForme();
+
         public Bitmap Dessiner()
         {
             Bitmap bitmap = new Bitmap(100, 100);

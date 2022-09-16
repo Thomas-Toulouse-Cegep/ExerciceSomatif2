@@ -1,4 +1,5 @@
 ﻿using ExerciceSomatif2.Model;
+using ExerciceSomatif2.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,14 +19,24 @@ namespace ExerciceSomatif2.Controles
         public Forme Forme
         {
             get => forme;
-            set
+            set { SetForme(value); }
+        }
+
+        private void SetForme(Forme? forme)
+        {
+            if (forme is null)
             {
-                forme = value;
-                initForme();
+                lbAffichageForm.Text = "";
+                picboxForme.Image = null;
+            }
+            this.forme = forme;
+            if (forme is not null)
+            {
+                InitForme();
             }
         }
 
-        private void initForme()
+        private void InitForme()
         {
             throw new NotImplementedException();
         }

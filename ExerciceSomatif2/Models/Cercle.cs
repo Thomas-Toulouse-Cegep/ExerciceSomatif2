@@ -18,5 +18,10 @@ namespace ExerciceSomatif2.Models
             Pen pen = new Pen(Color.Orange, 5);
             graphics.DrawEllipse(pen, 10, 10, Diametre, Diametre);
         }
+
+        public override string TypeForme()
+        {
+            return "Cercle";
+        }
     }
 }

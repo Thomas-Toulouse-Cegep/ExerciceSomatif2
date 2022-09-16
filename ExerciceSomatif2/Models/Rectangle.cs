@@ -11,13 +11,10 @@ namespace ExerciceSomatif2.Models
     {
         protected int longueur;
         protected int hauteur;
-        private string type;
 
-        public Rectangle(int longueur, int hauteur, string type)
+        public override string TypeForme()
         {
-            this.longueur = longueur;
-            this.hauteur = hauteur;
-            this.type = type;
+            return "Rectangle"; ;
         }
 
         protected override void Dessiner(Graphics graphics)

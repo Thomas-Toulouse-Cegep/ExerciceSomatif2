@@ -12,6 +12,11 @@ namespace ExerciceSomatif2.Models
         private int rayon;
         private int Diametre { get => rayon * 2; set => rayon = value / 2; }
 
+        public override string TypeForme()
+        {
+            return "Cercle Plein";
+        }
+
         protected override void Dessiner(Graphics graphics)
         {
             Brush brush = new SolidBrush(Color.Orange);

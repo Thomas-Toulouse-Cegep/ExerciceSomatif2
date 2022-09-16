@@ -30,8 +30,8 @@
         {
             this.lbTypeDeForme = new System.Windows.Forms.Label();
             this.lbAffichageForm = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picboxForme = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxForme)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTypeDeForme
@@ -55,25 +55,25 @@
             this.lbAffichageForm.Text = "affichageType de Forme:";
             this.lbAffichageForm.Click += new System.EventHandler(this.lbAffichageForm_Click);
             // 
-            // pictureBox1
+            // picboxForme
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(174, 53);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(227, 207);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.picboxForme.Location = new System.Drawing.Point(174, 53);
+            this.picboxForme.Name = "picboxForme";
+            this.picboxForme.Size = new System.Drawing.Size(227, 207);
+            this.picboxForme.TabIndex = 2;
+            this.picboxForme.TabStop = false;
             // 
             // ControlUserForme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picboxForme);
             this.Controls.Add(this.lbAffichageForm);
             this.Controls.Add(this.lbTypeDeForme);
             this.Name = "ControlUserForme";
             this.Size = new System.Drawing.Size(563, 270);
             this.Load += new System.EventHandler(this.ControlUserForme_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxForme)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,6 +83,6 @@
 
         private Label lbTypeDeForme;
         private Label lbAffichageForm;
-        private PictureBox pictureBox1;
+        private PictureBox picboxForme;
     }
 }
