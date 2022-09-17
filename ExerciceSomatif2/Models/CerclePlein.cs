@@ -10,9 +10,14 @@ namespace ExerciceSomatif2.Models
     public class CerclePlein : Forme
     {
         private int rayon;
+
+        public CerclePlein(Color color) : base(color)
+        {
+        }
+
         private int Diametre { get => rayon * 2; set => rayon = value / 2; }
 
-        public override string TypeForme()
+        public override string ObtenirForme()
         {
             return "Cercle Plein";
         }

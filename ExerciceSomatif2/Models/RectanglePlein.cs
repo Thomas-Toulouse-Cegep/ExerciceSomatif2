@@ -12,7 +12,11 @@ namespace ExerciceSomatif2.Models
         protected int longueur;
         protected int hauteur;
 
-        public override string TypeForme()
+        public RectanglePlein(Color color) : base(color)
+        {
+        }
+
+        public override string ObtenirForme()
         {
             return "Rectangle Plein";
         }

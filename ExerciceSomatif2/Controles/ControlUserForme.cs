@@ -1,5 +1,4 @@
-﻿using ExerciceSomatif2.Model;
-using ExerciceSomatif2.Models;
+﻿using ExerciceSomatif2.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,12 +37,13 @@ namespace ExerciceSomatif2.Controles
 
         private void InitForme()
         {
-            throw new NotImplementedException();
+            lbAffichageForm.Text = forme.ObtenirForme();
         }
 
         public ControlUserForme()
         {
             InitializeComponent();
+            picboxForme.Image = forme.Dessiner();
         }
 
         private void lbAffichageForm_Click(object sender, EventArgs e)

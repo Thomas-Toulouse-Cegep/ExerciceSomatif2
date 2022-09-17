@@ -10,8 +10,12 @@ namespace ExerciceSomatif2.Models
     public class Cercle : Forme
     {
         private int rayon;
+
+        public Cercle(Color color) : base(color)
+        {
+        }
+
         private int Diametre { get => rayon * 2; set => rayon = value / 2; }
-        private string Type;
 
         protected override void Dessiner(Graphics graphics)
         {
@@ -19,7 +23,7 @@ namespace ExerciceSomatif2.Models
             graphics.DrawEllipse(pen, 10, 10, Diametre, Diametre);
         }
 
-        public override string TypeForme()
+        public override string ObtenirForme()
         {
             return "Cercle";
         }

@@ -11,15 +11,21 @@ namespace ExerciceSomatif2.Models
     {
         protected int longueur;
         protected int hauteur;
+        private string type;
+        private Color color;
 
-        public override string TypeForme()
+        public Rectangle(Color color) : base(color)
         {
-            return "Rectangle"; ;
+        }
+
+        public override string ObtenirForme()
+        {
+            return "Rectangle";
         }
 
         protected override void Dessiner(Graphics graphics)
         {
-            Pen pen = new Pen(Color.Green, 5);
+            Pen pen = new Pen(color, 5);
             graphics.DrawRectangle(pen, 10, 10, longueur, hauteur);
         }
     }
