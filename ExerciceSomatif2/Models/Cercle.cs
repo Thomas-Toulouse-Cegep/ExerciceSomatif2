@@ -13,6 +13,7 @@ namespace ExerciceSomatif2.Models
 
         public Cercle(Color color) : base(color)
         {
+            this.Color = color;
         }
 
         private int Diametre { get => rayon * 2; set => rayon = value / 2; }
@@ -20,7 +21,7 @@ namespace ExerciceSomatif2.Models
         protected override void Dessiner(Graphics graphics)
         {
             Pen pen = new Pen(Color.Orange, 5);
-            graphics.DrawEllipse(pen, 10, 10, Diametre, Diametre);
+            graphics.DrawEllipse(pen, 10, 10, 2, 2);
         }
 
         public override string ObtenirForme()

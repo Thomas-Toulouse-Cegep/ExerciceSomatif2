@@ -11,6 +11,7 @@ namespace ExerciceSomatif2
 
         private void btnGenererForme_Click(object sender, EventArgs e)
         {
+            Controller controller = new Controller();
         }
     }
 }

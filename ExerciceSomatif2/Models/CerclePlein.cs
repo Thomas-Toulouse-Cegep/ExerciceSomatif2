@@ -13,6 +13,7 @@ namespace ExerciceSomatif2.Models
 
         public CerclePlein(Color color) : base(color)
         {
+            this.Color = color;
         }
 
         private int Diametre { get => rayon * 2; set => rayon = value / 2; }

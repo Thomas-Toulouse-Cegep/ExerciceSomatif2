@@ -37,13 +37,16 @@ namespace ExerciceSomatif2.Controles
 
         private void InitForme()
         {
-            lbAffichageForm.Text = forme.ObtenirForme();
+            forme.Dessiner();
+            Controller controller = new Controller();
+            //formes[0].Dessiner();
+
+            lbAffichageForm.Text = "dsa";
         }
 
         public ControlUserForme()
         {
             InitializeComponent();
-            picboxForme.Image = forme.Dessiner();
         }
 
         private void lbAffichageForm_Click(object sender, EventArgs e)

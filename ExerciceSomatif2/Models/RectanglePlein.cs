@@ -14,6 +14,7 @@ namespace ExerciceSomatif2.Models
 
         public RectanglePlein(Color color) : base(color)
         {
+            this.Color = color;
         }
 
         public override string ObtenirForme()
