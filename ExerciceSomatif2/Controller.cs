@@ -13,7 +13,7 @@ namespace ExerciceSomatif2
 {
     public class Controller
     {
-        //        random = private new Random();
+       
 
         private List<Forme> formes;
         private int idForme;
