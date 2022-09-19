@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design.Behavior;
 
 namespace ExerciceSomatif2.Controles
 {
@@ -23,25 +24,43 @@ namespace ExerciceSomatif2.Controles
 
         private void SetForme(Forme? forme)
         {
+            //InitForme();
             if (forme is null)
             {
                 lbAffichageForm.Text = "";
                 picboxForme.Image = null;
             }
+            else
+            {
+                Desabonner();
+            }
             this.forme = forme;
             if (forme is not null)
             {
+                Abonner();
                 InitForme();
+            }
+        }
+
+        private void Abonner()
+        {
+            forme.ValeurIdChanged += ValeurIdChanged;
+        }
+
+        private void Desabonner()
+        {
+            if (forme is not null)
+            {
+                forme.ValeurIdChanged -= ValeurIdChanged;
             }
         }
 
         private void InitForme()
         {
-            forme.Dessiner();
-            Controller controller = new Controller();
+            
+            lbAffichageForm.Text = forme.Type;
+            picboxForme.Image = forme.Dessiner();
             //formes[0].Dessiner();
-
-            lbAffichageForm.Text = "dsa";
         }
 
         public ControlUserForme()
@@ -55,6 +74,11 @@ namespace ExerciceSomatif2.Controles
 
         private void ControlUserForme_Load(object sender, EventArgs e)
         {
+        }
+
+        private void ValeurIdChanged(object? sender, int valeur)
+        {
+            lbAffichageForm.Text = valeur.ToString();
         }
     }
 }

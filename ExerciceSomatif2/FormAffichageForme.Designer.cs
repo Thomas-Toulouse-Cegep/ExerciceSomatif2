@@ -60,6 +60,7 @@
             this.Controls.Add(this.btnGenererForme);
             this.Name = "FormAffichageForme";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormAffichageForme_Load);
             this.ResumeLayout(false);
 
         }

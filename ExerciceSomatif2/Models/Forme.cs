@@ -19,6 +19,8 @@ namespace ExerciceSomatif2.Models
         public string Type { get => type; set => type = value; }
         public Color Color { get => color; set => color = value; }
 
+        public event EventHandler<int> ValeurIdChanged;
+
         protected abstract void Dessiner(Graphics graphics);
 
         public abstract string ObtenirForme();

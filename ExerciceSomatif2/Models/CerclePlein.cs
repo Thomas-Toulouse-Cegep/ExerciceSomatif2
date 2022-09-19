@@ -9,14 +9,10 @@ namespace ExerciceSomatif2.Models
 {
     public class CerclePlein : Forme
     {
-        private int rayon;
-
         public CerclePlein(Color color) : base(color)
         {
             this.Color = color;
         }
-
-        private int Diametre { get => rayon * 2; set => rayon = value / 2; }
 
         public override string ObtenirForme()
         {
@@ -26,7 +22,7 @@ namespace ExerciceSomatif2.Models
         protected override void Dessiner(Graphics graphics)
         {
             Brush brush = new SolidBrush(Color.Orange);
-            graphics.FillEllipse(brush, 10, 10, Diametre, Diametre);
+            graphics.FillEllipse(brush, 10, 10, 100, 100);
         }
     }
 }

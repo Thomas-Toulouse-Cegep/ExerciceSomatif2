@@ -9,9 +9,6 @@ namespace ExerciceSomatif2.Models
 {
     public class Rectangle : Forme
     {
-        protected int longueur;
-        protected int hauteur;
-        private string type;
         private Color color;
 
         public Rectangle(Color color) : base(color)
@@ -21,13 +18,14 @@ namespace ExerciceSomatif2.Models
 
         public override string ObtenirForme()
         {
-            return "Rectangle";
+            return Type = "Rectangle";
         }
 
         protected override void Dessiner(Graphics graphics)
         {
             Pen pen = new Pen(color, 5);
-            graphics.DrawRectangle(pen, 10, 10, longueur, hauteur);
+            graphics.DrawRectangle(pen, 10, 10, 20, 20);
+            ObtenirForme();
         }
     }
 }
