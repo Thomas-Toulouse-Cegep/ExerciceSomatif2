@@ -24,7 +24,7 @@ namespace ExerciceSomatif2.Models
         protected override void Dessiner(Graphics graphics)
         {
             Pen pen = new Pen(color, 5);
-            graphics.DrawRectangle(pen, 10, 10, 20, 20);
+            graphics.DrawRectangle(pen, 10, 10, 70, 50);
             ObtenirForme();
         }
     }

@@ -16,13 +16,14 @@ namespace ExerciceSomatif2.Models
 
         public override string ObtenirForme()
         {
-            return "Cercle Plein";
+            return Type = "Cercle Plein";
         }
 
         protected override void Dessiner(Graphics graphics)
         {
             Brush brush = new SolidBrush(Color.Orange);
-            graphics.FillEllipse(brush, 10, 10, 100, 100);
+            graphics.FillEllipse(brush, 10, 10, 70, 70);
+            ObtenirForme();
         }
     }
 }

@@ -23,17 +23,22 @@ namespace ExerciceSomatif2
         private void btnGenererForme_Click(object sender, EventArgs e)
         {
             controller.ChoisirForme();
-            controller.IdForme += 1;
+            //controller.IdForme += 1;
         }
 
         private void Control_ChangementFormeCourant(object? sender, Forme forme)
         {
             controlUserForme1.Forme = forme;
-            controller.IdForme += 1;
+            controller.IdForme = (controller.IdForme + 1) % controller.Formes.Count; 
         }
 
         private void FormAffichageForme_Load(object sender, EventArgs e)
         {
+        }
+
+        private void controlUserForme1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

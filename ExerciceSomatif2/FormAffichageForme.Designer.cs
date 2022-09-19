@@ -35,9 +35,10 @@
             // btnGenererForme
             // 
             this.btnGenererForme.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGenererForme.Location = new System.Drawing.Point(276, 385);
+            this.btnGenererForme.Location = new System.Drawing.Point(242, 289);
+            this.btnGenererForme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenererForme.Name = "btnGenererForme";
-            this.btnGenererForme.Size = new System.Drawing.Size(223, 53);
+            this.btnGenererForme.Size = new System.Drawing.Size(195, 40);
             this.btnGenererForme.TabIndex = 0;
             this.btnGenererForme.Text = "Générer Forme";
             this.btnGenererForme.UseVisualStyleBackColor = true;
@@ -46,18 +47,21 @@
             // controlUserForme1
             // 
             this.controlUserForme1.Forme = null;
-            this.controlUserForme1.Location = new System.Drawing.Point(12, 12);
+            this.controlUserForme1.Location = new System.Drawing.Point(10, 9);
+            this.controlUserForme1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.controlUserForme1.Name = "controlUserForme1";
-            this.controlUserForme1.Size = new System.Drawing.Size(776, 338);
+            this.controlUserForme1.Size = new System.Drawing.Size(679, 254);
             this.controlUserForme1.TabIndex = 1;
+            this.controlUserForme1.Load += new System.EventHandler(this.controlUserForme1_Load);
             // 
             // FormAffichageForme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.controlUserForme1);
             this.Controls.Add(this.btnGenererForme);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormAffichageForme";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormAffichageForme_Load);

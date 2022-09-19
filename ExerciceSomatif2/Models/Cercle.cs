@@ -9,24 +9,21 @@ namespace ExerciceSomatif2.Models
 {
     public class Cercle : Forme
     {
-        private int rayon;
-
         public Cercle(Color color) : base(color)
         {
             this.Color = color;
         }
 
-        private int Diametre { get => rayon * 2; set => rayon = value / 2; }
+        public override string ObtenirForme()
+        {
+            return Type = "Cercle";
+        }
 
         protected override void Dessiner(Graphics graphics)
         {
             Pen pen = new Pen(Color.Orange, 5);
-            graphics.DrawEllipse(pen, 10, 10, 2, 2);
-        }
-
-        public override string ObtenirForme()
-        {
-            return "Cercle";
+            graphics.DrawEllipse(pen, 10, 10, 70, 70);
+            ObtenirForme();
         }
     }
 }

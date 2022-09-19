@@ -19,13 +19,14 @@ namespace ExerciceSomatif2.Models
 
         public override string ObtenirForme()
         {
-            return "Rectangle Plein";
+            return Type = "Rectangle Plein";
         }
 
         protected override void Dessiner(Graphics graphics)
         {
             Brush brush = new SolidBrush(Color.Green);
-            graphics.FillRectangle(brush, 10, 10, longueur, hauteur);
+            graphics.FillRectangle(brush, 10, 10, 70, 50);
+            ObtenirForme();
         }
     }
 }

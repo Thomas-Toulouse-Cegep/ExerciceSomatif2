@@ -26,11 +26,11 @@ namespace ExerciceSomatif2
             Formes.Add(new Rectangle(Color.Green));
             Formes.Add(new RectanglePlein(Color.Green));
             Formes.Add(new Cercle(Color.Orange));
-            Formes.Add(new CerclePlein(Color.Green));
+            Formes.Add(new CerclePlein(Color.Orange));
 
             IdForme = 0;
             FormeCourant = Formes[IdForme];
-            MessageBox.Show(Formes[IdForme].ObtenirForme());
+           
         }
 
         public Forme Forme { get => FormeCourant; }
@@ -47,10 +47,7 @@ namespace ExerciceSomatif2
         public void ChoisirForme()
         {
             Forme nouvelleForme = formes[idForme];
-            if (formeCourant != nouvelleForme)
-            {
-                return;
-            }
+       
             formeCourant = nouvelleForme;
             formeCourant.Dessiner();
             ChangementFormeCourantEvent?.Invoke(this, formeCourant);
